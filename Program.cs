@@ -65,6 +65,26 @@ namespace ConsoleApp1
 
             }
 
+
+            Utils.OutputDir = new DirectoryInfo($"{AppDomain.CurrentDomain.BaseDirectory}SampleApp");
+            using (ExcelPackage p = new ExcelPackage(template, true))
+            {
+                //Set up the headers
+                //default for sheets is 1 for dotnetcore
+                ExcelWorksheet ws = p.Workbook.Worksheets[1];
+                ws.Cells["A3"].Value = 123;
+                ws.Cells["B3"].Value = "123";
+                ws.Cells["C3"].Value = "123";
+                ws.Cells["D3"].Value = "123";
+                ws.Cells["E3"].Value = "EOD Rate";
+                //Get the documet as a byte array from the stream and save it to disk.  (This is useful in a webapplication) ... 
+                Byte[] bin = p.GetAsByteArray();
+
+                FileInfo file = Utils.GetFileInfo("sample4.xlsx");
+                File.WriteAllBytes(file.FullName, bin);
+                return file.FullName;
+            }
+
         }
         private static void Log(string text)
         {
