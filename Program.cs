@@ -49,16 +49,22 @@ namespace ConsoleApp1
                     tableHeaders.Add(node.Attributes["Caption"].Value);
                 }
                 // seting table rows as list of lists
-                foreach (XmlNode node in rows)
+                foreach (XmlNode rowNode in rows)
                 {
-                    Log(node.Attributes["Caption"].Value);
-                    headerCaptions.Add(node.Attributes["Caption"].Value);
-                    headerValues.Add(node.Attributes["Value"].Value);
+                    List<string> oneRow = new List<string>();
+                    foreach (XmlNode oneRowNode in rowNode)
+                    {
+                        oneRow.Add(oneRowNode.Attributes["Value"].Value);
+                    }
+                    tableRows.Add(oneRow);
+
+
+
                 }
 
 
-                Log(headerCaptions.ToString());
-                Log(rows.InnerXml);
+                Log(tableRows.ToString());
+
 
             }
 
