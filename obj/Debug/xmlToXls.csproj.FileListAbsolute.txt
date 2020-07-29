@@ -1,0 +1,7 @@
+C:\Users\chenp\Code\ConsoleApp1\ConsoleApp1\obj\Debug\xmlToXls.csprojAssemblyReference.cache
+C:\Users\chenp\Code\ConsoleApp1\ConsoleApp1\obj\Debug\xmlToXls.csproj.CoreCompileInputs.cache
+C:\Users\chenp\Code\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\chenp\Code\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\chenp\Code\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\chenp\Code\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\chenp\Code\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
