@@ -5,16 +5,32 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xmlToXls", "xmlToXls.csproj", "{D5375E82-BFF3-4D71-B9B4-174E32093970}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPPlus", "EPPlus\EPPlus.csproj", "{BE4A6343-F411-44A3-8D6F-F40747ED7BA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8984F87A-AE46-456D-B760-F8249F6ACEE9}"
+	ProjectSection(SolutionItems) = preProject
+		GraphTemplate.xlsx = GraphTemplate.xlsx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DevTest|Any CPU = DevTest|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D5375E82-BFF3-4D71-B9B4-174E32093970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D5375E82-BFF3-4D71-B9B4-174E32093970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5375E82-BFF3-4D71-B9B4-174E32093970}.DevTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5375E82-BFF3-4D71-B9B4-174E32093970}.DevTest|Any CPU.Build.0 = Debug|Any CPU
 		{D5375E82-BFF3-4D71-B9B4-174E32093970}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5375E82-BFF3-4D71-B9B4-174E32093970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE4A6343-F411-44A3-8D6F-F40747ED7BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4A6343-F411-44A3-8D6F-F40747ED7BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4A6343-F411-44A3-8D6F-F40747ED7BA5}.DevTest|Any CPU.ActiveCfg = DevTest|Any CPU
+		{BE4A6343-F411-44A3-8D6F-F40747ED7BA5}.DevTest|Any CPU.Build.0 = DevTest|Any CPU
+		{BE4A6343-F411-44A3-8D6F-F40747ED7BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4A6343-F411-44A3-8D6F-F40747ED7BA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

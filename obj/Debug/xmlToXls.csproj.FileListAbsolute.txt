@@ -19,3 +19,7 @@ C:\Users\chenp\Code\xmlTest\obj\Debug\ConsoleApp1.pdb
 C:\Users\chenp\Code\xmlTest\bin\Debug\ConsoleApp1.exe.config
 C:\Users\chenp\Code\xmlTest\bin\Debug\ConsoleApp1.exe
 C:\Users\chenp\Code\xmlTest\bin\Debug\ConsoleApp1.pdb
+C:\Users\chenp\Code\xmlTest\bin\Debug\EPPlus.dll
+C:\Users\chenp\Code\xmlTest\bin\Debug\EPPlus.pdb
+C:\Users\chenp\Code\xmlTest\bin\Debug\EPPlus.xml
+C:\Users\chenp\Code\xmlTest\obj\Debug\xmlToXls.csproj.CopyComplete

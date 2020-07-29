@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using OfficeOpenXml;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup;
 
-
-
-
-namespace ConsoleApp1
+namespace xmlToXls
 
 {
     class Program
@@ -24,9 +23,7 @@ namespace ConsoleApp1
             string xmlPath = Path.GetFullPath(Path.Combine(path, @"..\..\data.xml"));
             xmlData.Load(xmlPath);
             XmlNode root = xmlData.FirstChild;
-
-            Log("----------\n\n");
-            Log("Running");
+ 
 
             XmlNode headers = root.SelectSingleNode("Header");
             XmlNode rows = root.SelectSingleNode("Rows");
@@ -65,24 +62,54 @@ namespace ConsoleApp1
 
             }
 
+            string outpudirPath = Path.GetFullPath(Path.Combine(path, @"..\..\SampleOutPut"));
+            Utils.OutputDir = new DirectoryInfo(outpudirPath);
+            //$"{AppDomain.CurrentDomain.BaseDirectory}SampleApp"
 
-            Utils.OutputDir = new DirectoryInfo($"{AppDomain.CurrentDomain.BaseDirectory}SampleApp");
+            string templatePath = Path.GetFullPath(Path.Combine(path, @"..\..\GraphTemplate.xlsx"));
+            FileInfo template =
+                new FileInfo(templatePath);
+            string fileName = String.Join("- ", headerValues);
+            Random rnd = new Random();
+            int rand = rnd.Next(1, 10000);
+            fileName = fileName + rand +  ".xlsx";
+            fileName = fileName.Replace("/", "-").Replace("\\", "-").
+                Replace(@"\", "-").Replace("//", "-");
+
+            //Template path from library : $"{AppDomain.CurrentDomain.BaseDirectory}GraphTemplate.xlsx"
             using (ExcelPackage p = new ExcelPackage(template, true))
             {
                 //Set up the headers
                 //default for sheets is 1 for dotnetcore
                 ExcelWorksheet ws = p.Workbook.Worksheets[1];
-                ws.Cells["A3"].Value = 123;
-                ws.Cells["B3"].Value = "123";
-                ws.Cells["C3"].Value = "123";
-                ws.Cells["D3"].Value = "123";
-                ws.Cells["E3"].Value = "EOD Rate";
+                // first row headers
+                for (int i = 0; i < tableHeaders.Count; i++)
+                {
+                    int cell = i + 1;
+                    int firstRow = 1;
+                    ws.Cells[firstRow, cell].Value = tableHeaders[i];
+                }
+                for (int r = 0; r < tableRows.Count; r++)
+                {
+                    int row = r + 2;
+                    List<string> thisRow = tableRows[r];
+                    for (int c = 0; c < thisRow.Count; c++)
+                    {
+                        int cell = c + 1;
+                        ws.Cells[row, cell].Value = thisRow[c];
+                    }
+
+                }
+
+
+
                 //Get the documet as a byte array from the stream and save it to disk.  (This is useful in a webapplication) ... 
                 Byte[] bin = p.GetAsByteArray();
 
-                FileInfo file = Utils.GetFileInfo("sample4.xlsx");
+                FileInfo file = Utils.GetFileInfo(fileName);
                 File.WriteAllBytes(file.FullName, bin);
-                return file.FullName;
+                //return file.FullName;
+                Process.Start(Utils.OutputDir.FullName);
             }
 
         }

@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleApp1
+namespace xmlToXls
 {
     public class Utils
     {

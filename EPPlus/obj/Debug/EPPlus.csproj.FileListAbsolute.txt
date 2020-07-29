@@ -5,3 +5,9 @@ C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\obj\Debug\EPPlus.csprojAssemb
 C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\obj\Debug\EPPlus.csproj.CoreCompileInputs.cache
 C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\obj\Debug\EPPlus.dll
 C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\obj\Debug\EPPlus.pdb
+C:\Users\chenp\Code\xmlTest\EPPlus\bin\Debug\EPPlus.XML
+C:\Users\chenp\Code\xmlTest\EPPlus\bin\Debug\EPPlus.dll
+C:\Users\chenp\Code\xmlTest\EPPlus\bin\Debug\EPPlus.pdb
+C:\Users\chenp\Code\xmlTest\EPPlus\obj\Debug\EPPlus.csproj.CoreCompileInputs.cache
+C:\Users\chenp\Code\xmlTest\EPPlus\obj\Debug\EPPlus.dll
+C:\Users\chenp\Code\xmlTest\EPPlus\obj\Debug\EPPlus.pdb
