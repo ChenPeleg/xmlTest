@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using OfficeOpenXml;
 
 
 
@@ -62,18 +63,7 @@ namespace ConsoleApp1
 
                 }
 
-
-                Log(tableRows.ToString());
-
-
             }
-
-
-
-
-            // Log(xmlData.InnerXml);
-
-
 
         }
         private static void Log(string text)

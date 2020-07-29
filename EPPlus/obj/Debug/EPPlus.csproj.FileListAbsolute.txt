@@ -1,0 +1,7 @@
+C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\bin\Debug\EPPlus.XML
+C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\bin\Debug\EPPlus.dll
+C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\bin\Debug\EPPlus.pdb
+C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\obj\Debug\EPPlus.csprojAssemblyReference.cache
+C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\obj\Debug\EPPlus.csproj.CoreCompileInputs.cache
+C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\obj\Debug\EPPlus.dll
+C:\Projects\EPPlus-master new\EPPlus-master\EPPlus\obj\Debug\EPPlus.pdb
