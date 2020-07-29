@@ -29,16 +29,35 @@ namespace ConsoleApp1
 
             XmlNode headers = root.SelectSingleNode("Header");
             XmlNode rows = root.SelectSingleNode("Rows");
-            string[,] headersArray = new string[,] { { "" }, { "" } };
+            List<string> headerCaptions = new List<string>();
+            List<string> headerValues = new List<string>();
+            List<string> tableHeaders = new List<string>();
+            List<List<string>> tableRows = new List<List<string>>();
             string[,] rowsArray = new string[,] { { "" }, { "" } };
             if (root.HasChildNodes)
             {
-                // Log(headers.InnerXml);
-                for (int i = 0; i < headers.ChildNodes.Count; i++)
-                {
 
+                foreach (XmlNode node in headers)
+                {
+                    Log(node.Attributes["Caption"].Value);
+                    headerCaptions.Add(node.Attributes["Caption"].Value);
+                    headerValues.Add(node.Attributes["Value"].Value);
+                }
+                // seting table headers from the first row
+                foreach (XmlNode node in rows.FirstChild)
+                {
+                    tableHeaders.Add(node.Attributes["Caption"].Value);
+                }
+                // seting table rows as list of lists
+                foreach (XmlNode node in rows)
+                {
+                    Log(node.Attributes["Caption"].Value);
+                    headerCaptions.Add(node.Attributes["Caption"].Value);
+                    headerValues.Add(node.Attributes["Value"].Value);
                 }
 
+
+                Log(headerCaptions.ToString());
                 Log(rows.InnerXml);
 
             }
