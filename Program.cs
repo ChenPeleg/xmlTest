@@ -89,32 +89,63 @@ namespace xmlToXls
                 //default for sheets is 1 for dotnetcore
                 ExcelWorksheet ws = p.Workbook.Worksheets[1];
                 // first row headers
-                for (int i = 0; i < tableCaptions.Count; i++)
+
+                // seting table captions from the first row data
+                int ColIndex = 1; //First cell number is 1
+                foreach (XmlNode nodeTableCaption in rowsData.FirstChild)
                 {
-                    int cell = i + 1;
-                    int firstRow = 1;
-                    ws.Cells[firstRow, cell].Value = tableCaptions[i];
+                    ws.Cells[1, ColIndex].Value = nodeTableCaption.Attributes["Caption"].Value;
+                    ColIndex += 1;
                 }
-                for (int r = 0; r < tableRows.Count; r++)
+
+
+                int RowIndex = 2; //Start rows after caption row
+
+                foreach (XmlNode rowNode in rowsData)
                 {
-                    int row = r + 2;
-                    List<string> thisRow = tableRows[r];
-                    for (int c = 0; c < thisRow.Count; c++)
+                    int ColIndex = 1; //First cell number is 1
+                    foreach (XmlNode oneRowNode in rowNode)
                     {
-                        int cell = c + 1;
-                        var value = thisRow[c];
+                        var value = oneRowNode.Attributes["Value"].Value;
                         decimal decimalValue;
 
                         if (decimal.TryParse(value, out decimalValue))
                         {
-                            ws.Cells[row, cell].Value = decimalValue;
+                            ws.Cells[RowIndex, ColIndex].Value = decimalValue;
                         }
                         else
                         {
-                            ws.Cells[row, cell].Value = value;
+                            ws.Cells[RowIndex, ColIndex].Value = value;
                         };
+
+                        ColIndex += 1;
                     }
+                    tableRows.Add(oneRow);
+
+                    RowIndex += 1;
+
                 }
+
+                //for (int r = 0; r < tableRows.Count; r++)
+                //{
+                //    int row = r + 2;
+                //    List<string> thisRow = tableRows[r];
+                //    for (int c = 0; c < thisRow.Count; c++)
+                //    {
+                //        int cell = c + 1;
+                //        var value = thisRow[c];
+                //        decimal decimalValue;
+
+                //        if (decimal.TryParse(value, out decimalValue))
+                //        {
+                //            ws.Cells[row, cell].Value = decimalValue;
+                //        }
+                //        else
+                //        {
+                //            ws.Cells[row, cell].Value = value;
+                //        };
+                //    }
+                //}
                 saveFile(p, fileName);
             }
 
