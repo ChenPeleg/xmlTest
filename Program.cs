@@ -80,8 +80,7 @@ namespace xmlToXls
                 ExcelWorksheet ws = p.Workbook.Worksheets[2];
                 int totalRows = rowsData.ChildNodes.Count + 1;
                 int totalCols = rowsData.FirstChild.ChildNodes.Count;
-                totalRows = 10;
-                totalCols = 10;
+
                 for (int rownumber = 0; rownumber < totalRows; rownumber++)
                 {
                     ws.InsertRow(2 + rownumber, 1);
@@ -92,13 +91,13 @@ namespace xmlToXls
                     ws.InsertColumn(2 + colnumber, 1);
                     ws.Cells[1, 3 + colnumber, totalRows, 3 + colnumber].Copy(ws.Cells[1, 2 + colnumber, totalRows, 2 + colnumber]);
                 }
-                ws.Cells[totalRows, 1, totalRows + 10, totalCols].Clear();
-                ws.Cells[1, totalCols, totalRows, totalCols + 10].Clear();
+                ws.Cells[totalRows + 1, 1, totalRows + 12, totalCols + 20].Clear();
+                ws.Cells[1, totalCols + 1, totalRows + 10, totalCols + 10].Clear();
                 /* ws.InsertRow(2, rowsData.FirstChild.ChildNodes.Count);
                  ws.InsertColumn(2, rowsData.ChildNodes.Count);*/
                 // first row headers
                 // seting table captions from the first row data
-                /*
+
                 int ColIndex = 1; //First cell number is 1
                 foreach (XmlNode nodeTableCaption in rowsData.FirstChild)
                 {
@@ -133,8 +132,30 @@ namespace xmlToXls
                     RowIndex += 1;
 
                 }
+                // changing headers in cells
+
+                foreach (var worksheetCell in wsBase.Cells)
+                {
+                    if (worksheetCell?.Value?.ToString() == "<TABLE>")
+                    {
+                        worksheetCell.Copy(ws.Cells[1, 1, totalRows + 1, totalCols + 1])
+                    }
+
+                    foreach (XmlNode nodeHeaderField in headerData)
+                    {
+                        if (worksheetCell?.Value?.ToString() == "<" + nodeHeaderField.Attributes["Caption"].Value + ">")
+                        {
+                            worksheetCell.Value = nodeHeaderField.Attributes["Value"].Value;
+                        }
+
+                    }
+
+
+
+
+                }
                 ws.Cells[ws.Dimension.Address].AutoFitColumns();
-                */
+
                 saveFile(p, fileName);
 
             }
