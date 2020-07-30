@@ -1,1 +1,279 @@
-<root><Header><H1 Caption="תאריך" Value="03/12/2020" /><H2 Caption="מעבדה" Value="קבוצת הנדסה" /><H3 Caption="בדיקה" Value="בדיקת חוזק בטון" /></Header><Rows><R1><C1 Caption="תאריך" Value="03/12/2020" /><C2 Caption="שעה" Value="10:00" /><C3 Caption="אלמנטים" Value="גשר S1/ניצב 5" /><C4 Caption="חתכים" Value="10-20" /><C5 Caption="כמות יציקה" Value="100" /></R1><R2><C1 Caption="תאריך" Value="03/12/2020" /><C2 Caption="שעה" Value="11:00" /><C3 Caption="אלמנטים" Value="כביש 4 רמפה 5" /><C4 Caption="חתכים" Value="100 - 200" /><C5 Caption="כמות יציקה" Value="22" /></R2><R3><C1 Caption="תאריך" Value="03/12/2020" /><C2 Caption="שעה" Value="12:00" /><C3 Caption="אלמנטים" Value="בור ללא תחתית" /><C4 Caption="חתכים" Value="1000-2000" /><C5 Caption="כמות יציקה" Value="99" /></R3></Rows></root>
+<root>
+  <Header>
+    <H1 Caption="תאריך" Value="44030.000000000" />
+    <H2 Caption="מעבדה" Value="איזוטופ" />
+    <H3 Caption="בדיקה" Value="בדיקת גלילים - בטון קשוי" />
+  </Header>
+  <Rows>
+    <R1>
+      <C1 Caption="הזמנה" Value="75" />
+      <C2 Caption="תאריך" Value="44030.000000000" />
+      <C3 Caption="שעה" Value="12:03" />
+      <C4 Caption="אלמנטים" Value="הכל,תעלות ומעבירי מים" />
+      <C5 Caption="חתכים" Value=" " />
+      <C6 Caption="מס' שכבה" Value=" " />
+      <C7 Caption="צד" Value="דרומי" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="ב-50" />
+      <C10 Caption="קבלן" Value="אליקים בן ארי" />
+      <C11 Caption="מעבדה" Value="איזוטופ" />
+      <C12 Caption="מספרי הכלונסאות" Value="11" />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="אינרטי א'" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value=" " />
+    </R1>
+    <R2>
+      <C1 Caption="הזמנה" Value="73" />
+      <C2 Caption="תאריך" Value="44030.000000000" />
+      <C3 Caption="שעה" Value="12:22" />
+      <C4 Caption="אלמנטים" Value="הכל,תעלות ומעבירי מים" />
+      <C5 Caption="חתכים" Value=" " />
+      <C6 Caption="מס' שכבה" Value=" " />
+      <C7 Caption="צד" Value="דרומי" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="CLSM" />
+      <C10 Caption="קבלן" Value="אליקים בן ארי" />
+      <C11 Caption="מעבדה" Value="איזוטופ" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="אינרטי א'" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value=" " />
+    </R2>
+    <R3>
+      <C1 Caption="הזמנה" Value="52" />
+      <C2 Caption="תאריך" Value="44026.000000000" />
+      <C3 Caption="שעה" Value=" " />
+      <C4 Caption="אלמנטים" Value="הכל,תעלות ומעבירי מים" />
+      <C5 Caption="חתכים" Value="2-3" />
+      <C6 Caption="מס' שכבה" Value="2" />
+      <C7 Caption="צד" Value="דרומי" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="CLSM" />
+      <C10 Caption="קבלן" Value="אליקים בן ארי" />
+      <C11 Caption="מעבדה" Value="איזוטופ" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="אינרטי א'" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value="fsadfasdfasdf" />
+    </R3>
+    <R4>
+      <C1 Caption="הזמנה" Value="86" />
+      <C2 Caption="תאריך" Value="44025.000000000" />
+      <C3 Caption="שעה" Value=" " />
+      <C4 Caption="אלמנטים" Value="הכל,קירות משוריינים" />
+      <C5 Caption="חתכים" Value=" " />
+      <C6 Caption="מס' שכבה" Value=" " />
+      <C7 Caption="צד" Value="ריק" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="ב-30" />
+      <C10 Caption="קבלן" Value="אליקים בן ארי" />
+      <C11 Caption="מעבדה" Value="מכון העמקים" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="אינרטי א'" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value=" " />
+    </R4>
+    <R5>
+      <C1 Caption="הזמנה" Value="2" />
+      <C2 Caption="תאריך" Value="44022.000000000" />
+      <C3 Caption="שעה" Value="17:58" />
+      <C4 Caption="אלמנטים" Value="הכל,גשרי שילוט;הכל,אבני דרך;הכל,קירות משוריינים" />
+      <C5 Caption="חתכים" Value="3333-11111, 44-55" />
+      <C6 Caption="מס' שכבה" Value="35345" />
+      <C7 Caption="צד" Value="R" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="בנטונייט" />
+      <C10 Caption="קבלן" Value="אליקים בן ארי" />
+      <C11 Caption="מעבדה" Value="מכון העמקים" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="נדגם משכבה מפוזרת" />
+      <C15 Caption="מאשר" Value="אליק" />
+      <C16 Caption="הערות" Value="שמירה&#xA;" />
+    </R5>
+    <R6>
+      <C1 Caption="הזמנה" Value="9" />
+      <C2 Caption="תאריך" Value="44016.000000000" />
+      <C3 Caption="שעה" Value=" " />
+      <C4 Caption="אלמנטים" Value=" " />
+      <C5 Caption="חתכים" Value=" " />
+      <C6 Caption="מס' שכבה" Value="2" />
+      <C7 Caption="צד" Value="L" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="גלילי בטון קשוי" />
+      <C10 Caption="קבלן" Value="0" />
+      <C11 Caption="מעבדה" Value="0" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="0" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value=" " />
+    </R6>
+    <R7>
+      <C1 Caption="הזמנה" Value="19" />
+      <C2 Caption="תאריך" Value="44015.000000000" />
+      <C3 Caption="שעה" Value="65" />
+      <C4 Caption="אלמנטים" Value="הכל,גשרים;הכל,גשרי שילוט;הכל,תעלות ומעבירי מים" />
+      <C5 Caption="חתכים" Value="5-6" />
+      <C6 Caption="מס' שכבה" Value="65" />
+      <C7 Caption="צד" Value="CL" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="-1" />
+      <C10 Caption="קבלן" Value="אליקים בן ארי" />
+      <C11 Caption="מעבדה" Value="איזוטופ" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="נגבה" />
+      <C15 Caption="מאשר" Value="65" />
+      <C16 Caption="הערות" Value=" " />
+    </R7>
+    <R8>
+      <C1 Caption="הזמנה" Value="25" />
+      <C2 Caption="תאריך" Value="43890.000000000" />
+      <C3 Caption="שעה" Value=" " />
+      <C4 Caption="אלמנטים" Value="הכל,גשרים;הכל,קירות משוריינים" />
+      <C5 Caption="חתכים" Value="5-6" />
+      <C6 Caption="מס' שכבה" Value="33" />
+      <C7 Caption="צד" Value="ריק" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="ללא שם" />
+      <C10 Caption="קבלן" Value="אליקים בן ארי" />
+      <C11 Caption="מעבדה" Value="מכון העמקים" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="פזקר" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value="בטון קשוי" />
+    </R8>
+    <R9>
+      <C1 Caption="הזמנה" Value="21" />
+      <C2 Caption="תאריך" Value="43866.000000000" />
+      <C3 Caption="שעה" Value="77" />
+      <C4 Caption="אלמנטים" Value="הכל,גשרים;הכל,גשרי שילוט" />
+      <C5 Caption="חתכים" Value="2-5" />
+      <C6 Caption="מס' שכבה" Value="103" />
+      <C7 Caption="צד" Value="R" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="בנטונייט" />
+      <C10 Caption="קבלן" Value="אליקים בן ארי" />
+      <C11 Caption="מעבדה" Value="מכון העמקים" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="מצבור קבלן - חומר מנופה" />
+      <C15 Caption="מאשר" Value="77" />
+      <C16 Caption="הערות" Value="77" />
+    </R9>
+    <R10>
+      <C1 Caption="הזמנה" Value="26" />
+      <C2 Caption="תאריך" Value="36949.000000000" />
+      <C3 Caption="שעה" Value="24" />
+      <C4 Caption="אלמנטים" Value="הכל,תעלות ומעבירי מים;הכל,גשרי שילוט" />
+      <C5 Caption="חתכים" Value="1-2" />
+      <C6 Caption="מס' שכבה" Value="8" />
+      <C7 Caption="צד" Value="CR" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="6008" />
+      <C10 Caption="קבלן" Value="אליקים בן ארי" />
+      <C11 Caption="מעבדה" Value="איזוטופ" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="תרקומיא" />
+      <C15 Caption="מאשר" Value="222" />
+      <C16 Caption="הערות" Value="222" />
+    </R10>
+    <R11>
+      <C1 Caption="הזמנה" Value="8" />
+      <C2 Caption="תאריך" Value=" " />
+      <C3 Caption="שעה" Value=" " />
+      <C4 Caption="אלמנטים" Value=" " />
+      <C5 Caption="חתכים" Value=" " />
+      <C6 Caption="מס' שכבה" Value="2" />
+      <C7 Caption="צד" Value="L" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="גלילי בטון קשוי" />
+      <C10 Caption="קבלן" Value="0" />
+      <C11 Caption="מעבדה" Value="0" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="0" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value=" " />
+    </R11>
+    <R12>
+      <C1 Caption="הזמנה" Value="7" />
+      <C2 Caption="תאריך" Value=" " />
+      <C3 Caption="שעה" Value=" " />
+      <C4 Caption="אלמנטים" Value=" " />
+      <C5 Caption="חתכים" Value=" " />
+      <C6 Caption="מס' שכבה" Value="2" />
+      <C7 Caption="צד" Value="-1" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="0" />
+      <C10 Caption="קבלן" Value="0" />
+      <C11 Caption="מעבדה" Value="0" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="0" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value=" " />
+    </R12>
+    <R13>
+      <C1 Caption="הזמנה" Value="6" />
+      <C2 Caption="תאריך" Value=" " />
+      <C3 Caption="שעה" Value=" " />
+      <C4 Caption="אלמנטים" Value=" " />
+      <C5 Caption="חתכים" Value=" " />
+      <C6 Caption="מס' שכבה" Value="2" />
+      <C7 Caption="צד" Value="-1" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="0" />
+      <C10 Caption="קבלן" Value="0" />
+      <C11 Caption="מעבדה" Value="0" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="0" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value=" " />
+    </R13>
+    <R14>
+      <C1 Caption="הזמנה" Value="5" />
+      <C2 Caption="תאריך" Value=" " />
+      <C3 Caption="שעה" Value=" " />
+      <C4 Caption="אלמנטים" Value=" " />
+      <C5 Caption="חתכים" Value=" " />
+      <C6 Caption="מס' שכבה" Value="2" />
+      <C7 Caption="צד" Value="L" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="0" />
+      <C10 Caption="קבלן" Value="0" />
+      <C11 Caption="מעבדה" Value="0" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="0" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value=" " />
+    </R14>
+    <R15>
+      <C1 Caption="הזמנה" Value="4" />
+      <C2 Caption="תאריך" Value=" " />
+      <C3 Caption="שעה" Value=" " />
+      <C4 Caption="אלמנטים" Value=" " />
+      <C5 Caption="חתכים" Value=" " />
+      <C6 Caption="מס' שכבה" Value="2" />
+      <C7 Caption="צד" Value="-1" />
+      <C8 Caption="שלב" Value="7" />
+      <C9 Caption="חומר" Value="0" />
+      <C10 Caption="קבלן" Value="0" />
+      <C11 Caption="מעבדה" Value="0" />
+      <C12 Caption="מספרי הכלונסאות" Value=" " />
+      <C13 Caption="כמות יציקה במ&quot;ק" Value=" " />
+      <C14 Caption="מקור החומר" Value="0" />
+      <C15 Caption="מאשר" Value=" " />
+      <C16 Caption="הערות" Value=" " />
+    </R15>
+  </Rows>
+</root>
