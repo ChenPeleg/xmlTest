@@ -26,9 +26,9 @@ namespace xmlToXls
             string templatePath = Path.GetFullPath(Path.Combine(path, @"..\..\GraphTemplate.xlsx"));
             FileInfo template = new FileInfo(templatePath);
             //ExcelPackage excelpackage = createXlsx(xmlData, template);
-            Random rnd = new Random();
-            int rand = rnd.Next(1, 10000);
-            string fileName = "יצוא בדיקות מעבדה" + rand.ToString() + ".xlsx";
+            Random rn = new Random();
+            int rand = rn.Next(1, 100);
+            string fileName = "יצוא בדיקות מעבדה" + " A " + rand + ".xlsx";
 
             createXlsx(xmlData, template, fileName);
 
@@ -43,54 +43,62 @@ namespace xmlToXls
             List<List<string>> tableRows = new List<List<string>>();
 
             // Convert data from XML Structure to List structure
-            if (xmlData.HasChildNodes)
+
+
+            foreach (XmlNode nodeHeaderField in headerData)
             {
 
-                foreach (XmlNode nodeHeaderField in headerData)
+                headerCaptions.Add(nodeHeaderField.Attributes["Caption"].Value);
+                headerValues.Add(nodeHeaderField.Attributes["Value"].Value);
+            }
+            // seting table captions from the first row data
+            foreach (XmlNode nodeTableCaption in rowsData.FirstChild)
+            {
+                tableCaptions.Add(nodeTableCaption.Attributes["Caption"].Value);
+            }
+            // seting table rows as list of lists
+            foreach (XmlNode rowNode in rowsData)
+            {
+                List<string> oneRow = new List<string>();
+                foreach (XmlNode oneRowNode in rowNode)
                 {
-
-                    headerCaptions.Add(nodeHeaderField.Attributes["Caption"].Value);
-                    headerValues.Add(nodeHeaderField.Attributes["Value"].Value);
+                    oneRow.Add(oneRowNode.Attributes["Value"].Value);
                 }
-                // seting table captions from the first row data
-                foreach (XmlNode nodeTableCaption in rowsData.FirstChild)
-                {
-                    tableCaptions.Add(nodeTableCaption.Attributes["Caption"].Value);
-                }
-                // seting table rows as list of lists
-                foreach (XmlNode rowNode in rowsData)
-                {
-                    List<string> oneRow = new List<string>();
-                    foreach (XmlNode oneRowNode in rowNode)
-                    {
-                        oneRow.Add(oneRowNode.Attributes["Value"].Value);
-                    }
-                    tableRows.Add(oneRow);
-
-
-
-                }
+                tableRows.Add(oneRow);
 
             }
 
 
-            //$"{AppDomain.CurrentDomain.BaseDirectory}SampleApp"
-            /*  string fileName = String.Join("- ", headerValues);
-              Random rnd = new Random();
-              int rand = rnd.Next(1, 10000);
-              fileName = fileName + rand + ".xlsx";
-              fileName = fileName.Replace("/", "-").Replace("\\", "-").
-                  Replace(@"\", "-").Replace("//", "-");*/
+
 
             //Template path from library : $"{AppDomain.CurrentDomain.BaseDirectory}GraphTemplate.xlsx"
             using (ExcelPackage p = new ExcelPackage(template, true))
             {
-                //Set up the headers
-                //default for sheets is 1 for dotnetcore
-                ExcelWorksheet ws = p.Workbook.Worksheets[1];
-                // first row headers
 
+                //default for sheets is 1 for dotnetcore
+                ExcelWorksheet wsBase = p.Workbook.Worksheets[1];
+                ExcelWorksheet ws = p.Workbook.Worksheets[2];
+                int totalRows = rowsData.ChildNodes.Count + 1;
+                int totalCols = rowsData.FirstChild.ChildNodes.Count;
+                totalRows = 10;
+                totalCols = 10;
+                for (int rownumber = 0; rownumber < totalRows; rownumber++)
+                {
+                    ws.InsertRow(2 + rownumber, 1);
+                    ws.Cells[4 + rownumber, 1, 4 + rownumber, totalCols].Copy(ws.Cells[2 + rownumber, 1, 2 + rownumber, totalCols]);
+                }
+                for (int colnumber = 0; colnumber < totalCols; colnumber++)
+                {
+                    ws.InsertColumn(2 + colnumber, 1);
+                    ws.Cells[1, 3 + colnumber, totalRows, 3 + colnumber].Copy(ws.Cells[1, 2 + colnumber, totalRows, 2 + colnumber]);
+                }
+                ws.Cells[totalRows, 1, totalRows + 10, totalCols].Clear();
+                ws.Cells[1, totalCols, totalRows, totalCols + 10].Clear();
+                /* ws.InsertRow(2, rowsData.FirstChild.ChildNodes.Count);
+                 ws.InsertColumn(2, rowsData.ChildNodes.Count);*/
+                // first row headers
                 // seting table captions from the first row data
+                /*
                 int ColIndex = 1; //First cell number is 1
                 foreach (XmlNode nodeTableCaption in rowsData.FirstChild)
                 {
@@ -103,7 +111,7 @@ namespace xmlToXls
 
                 foreach (XmlNode rowNode in rowsData)
                 {
-                    int ColIndex = 1; //First cell number is 1
+                    ColIndex = 1; //First cell number is 1
                     foreach (XmlNode oneRowNode in rowNode)
                     {
                         var value = oneRowNode.Attributes["Value"].Value;
@@ -120,34 +128,17 @@ namespace xmlToXls
 
                         ColIndex += 1;
                     }
-                    tableRows.Add(oneRow);
+                    //tableRows.Add(oneRow);
 
                     RowIndex += 1;
 
                 }
-
-                //for (int r = 0; r < tableRows.Count; r++)
-                //{
-                //    int row = r + 2;
-                //    List<string> thisRow = tableRows[r];
-                //    for (int c = 0; c < thisRow.Count; c++)
-                //    {
-                //        int cell = c + 1;
-                //        var value = thisRow[c];
-                //        decimal decimalValue;
-
-                //        if (decimal.TryParse(value, out decimalValue))
-                //        {
-                //            ws.Cells[row, cell].Value = decimalValue;
-                //        }
-                //        else
-                //        {
-                //            ws.Cells[row, cell].Value = value;
-                //        };
-                //    }
-                //}
+                ws.Cells[ws.Dimension.Address].AutoFitColumns();
+                */
                 saveFile(p, fileName);
+
             }
+
 
 
         }

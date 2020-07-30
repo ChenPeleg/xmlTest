@@ -11,3 +11,4 @@ C:\Users\chenp\Code\xmlTest\EPPlus\bin\Debug\EPPlus.pdb
 C:\Users\chenp\Code\xmlTest\EPPlus\obj\Debug\EPPlus.csproj.CoreCompileInputs.cache
 C:\Users\chenp\Code\xmlTest\EPPlus\obj\Debug\EPPlus.dll
 C:\Users\chenp\Code\xmlTest\EPPlus\obj\Debug\EPPlus.pdb
+C:\Users\chenp\Code\xmlTest\EPPlus\obj\Debug\EPPlus.csprojAssemblyReference.cache
