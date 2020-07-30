@@ -133,12 +133,15 @@ namespace xmlToXls
 
                 }
                 // changing headers in cells
-
+                string tableName = "<TABLE>";
                 foreach (var worksheetCell in wsBase.Cells)
                 {
-                    if (worksheetCell?.Value?.ToString() == "<TABLE>")
+                    if (worksheetCell?.Value?.ToString() == tableName)
                     {
-                        worksheetCell.Copy(ws.Cells[1, 1, totalRows + 1, totalCols + 1])
+
+                        int startR = worksheetCell.Start.Row;
+                        int startC = worksheetCell.Start.Column;
+                        ws.Cells[1, 1, totalRows + 1, totalCols + 1].Copy(wsBase.Cells[startR, startC, startR + totalRows + 1, startC + totalCols + 1]);
                     }
 
                     foreach (XmlNode nodeHeaderField in headerData)
@@ -150,11 +153,9 @@ namespace xmlToXls
 
                     }
 
-
-
-
                 }
-                ws.Cells[ws.Dimension.Address].AutoFitColumns();
+                p.Workbook.Worksheets.Delete(ws);
+                wsBase.Cells[wsBase.Dimension.Address].AutoFitColumns();
 
                 saveFile(p, fileName);
 
